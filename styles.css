@@ -457,3 +457,51 @@ section {
         font-size: 1.8rem;
     }
 }
+
+/* Estilo para la sección de ubicación lado a lado (como en tu referencia) */
+.location-section-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.location-photo-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.torn-edge-photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    /* Si la subes en PNG con transparencia y el borde rasgado, se verá idéntico a tu referencia */
+}
+
+.location-section-horizontal .location-content-box {
+    flex: 1;
+    text-align: left;
+}
+
+/* Adaptabilidad para celulares: si la pantalla es chica, se acomodan uno debajo de otro */
+@media screen and (max-width: 768px) {
+    .location-section-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .location-photo-wrapper {
+        justify-content: center;
+    }
+
+    .location-section-horizontal .location-content-box {
+        text-align: center;
+    }
+}
