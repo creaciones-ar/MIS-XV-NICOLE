@@ -386,3 +386,26 @@ section {
     margin-bottom: 25px;
     color: #4a5568;
 }
+
+/* Estilo para que tu icono funcione como botón de reproducción */
+.custom-play-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.custom-play-btn:hover {
+    transform: scale(1.03);
+}
+
+.custom-player-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
