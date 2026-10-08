@@ -103,9 +103,9 @@ body.welcome-active {
     margin-top: 15px;
 }
 
-/* Secciones generales (Damos más espacio arriba para que no se corte la corona) */
+/* Secciones generales: Margen superior generoso para que no se corte la corona */
 section {
-    padding: 70px 20px 40px 20px;
+    padding: 90px 20px 40px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@ section {
 .name-balloons-container {
     width: 100%;
     max-width: 450px;
-    margin: 10px auto 20px auto;
+    margin: 10px auto 25px auto;
     text-align: center;
     padding: 0 15px;
 }
@@ -156,7 +156,7 @@ section {
 
 .bible-section-left .bible-verse {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: 1.9rem;
     line-height: 1.35;
     color: #1b365d;
     margin-bottom: 10px;
@@ -398,7 +398,7 @@ section {
    ======================================================== */
 @media screen and (max-width: 768px) {
     .verse-photos-asymmetric {
-        flex-direction: column;
+        flex-direction: column; /* Versículo arriba y fotos abajo */
         text-align: center;
         gap: 25px;
     }
@@ -410,16 +410,27 @@ section {
     }
 
     .bible-section-left .bible-verse {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .polaroid-stack-right {
         justify-content: center;
         width: 100%;
+        gap: 15px;
+    }
+
+    /* Reducimos un poco el tamaño de las fotos en celulares para que entren bien sin verse gigantes */
+    .polaroid-card {
+        width: 140px;
+        padding: 6px 6px 20px 6px;
+    }
+
+    .polaroid-card img {
+        height: 150px;
     }
 
     section {
-        padding: 60px 15px 30px 15px;
+        padding: 70px 15px 30px 15px; /* Espacio superior equilibrado para la corona */
     }
 
     .top-subtitle {
