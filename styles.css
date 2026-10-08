@@ -512,45 +512,30 @@ section {
     }
 }
 
-/* Línea decorativa superior en color azul */
+/* Línea decorativa azul superior */
 .section-divider-line {
     width: 80px;
-    height: 3px;
-    background-color: #1b365d !important;
-    margin: 40px auto 20px auto !important;
-    display: block !important;
+    height: 2px;
+    background-color: #1b365d;
+    margin: 40px auto 10px auto;
 }
 
-/* Forzar alineación centrada absoluta para toda la caja de texto y elementos */
-.location-content-box {
-    text-align: center !important;
-}
-
-/* Contenedor exclusivo para centrar el icono4 exactamente al medio */
-.icon-center-wrapper {
-    width: 100% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-bottom: 10px !important;
-}
-
-.location-section-horizontal .section-gif-icon {
-    width: 55px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-}
-
+/* Estructura de la sección lado a lado */
 .location-section-horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 20px 15px;
-    max-width: 800px;
+    gap: 40px;
+    padding: 30px 20px;
+    max-width: 850px;
     margin: 0 auto;
+}
+
+.location-photo-wrapper {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .torn-edge-photo {
@@ -558,4 +543,35 @@ section {
     max-width: 280px;
     height: auto;
     display: block;
+}
+
+/* Caja de contenido de texto centrada */
+.location-content-box {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+/* Tamaño controlado y centrado perfecto para el icono4 */
+.location-content-box .location-icon-img {
+    width: 60px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 10px auto !important;
+}
+
+/* Estilo para celulares */
+@media screen and (max-width: 768px) {
+    .location-section-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .location-photo-wrapper {
+        justify-content: center;
+        flex: 1;
+    }
+    .location-content-box {
+        flex: 1;
+        text-align: center;
+    }
 }
