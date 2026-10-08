@@ -409,3 +409,26 @@ section {
     height: auto;
     display: block;
 }
+
+/* Estilo para el botón de reproducción con tu icono */
+.custom-play-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-block;
+    margin: 0 auto;
+    transition: transform 0.2s ease;
+}
+
+.custom-play-btn:hover {
+    transform: scale(1.03);
+}
+
+.custom-player-img {
+    width: 100%;
+    max-width: 220px; /* Controla el tamaño para que no se expanda demasiado */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
