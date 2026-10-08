@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<!-- Pantalla de Entrada / Reproductor inicial -->
+    <!-- Pantalla de Entrada / Reproductor inicial -->
     <div id="welcome-screen">
         <div class="welcome-content">
             <h1 class="welcome-top-title">It's my birthday</h1>
@@ -34,32 +34,36 @@
     <!-- Contenido Principal -->
     <main id="main-content" class="hidden">
 
-<!-- Sección 1: Header / Música -->
+        <!-- Sección 1: Header con Icono4 (NICOLE) y el Versículo junto a foto1 y foto2 -->
         <section class="hero-music-section">
             <h1 class="top-subtitle">It's my birthday</h1>
-            <h2 class="main-fest-title">NICOLE FEST</h2>
-
             
-            <!-- Fotos estilo Polaroid superiores -->
-            <div class="polaroid-container top-polaroids">
-                <div class="polaroid-card tilt-left">
-                    <img src="fondo1.jpg" alt="Nicole">
+            <!-- Nombre con globos plateados (Icono4) -->
+            <div class="name-balloons-container">
+                <img src="Icono4.gif" alt="NICOLE" class="name-balloons-img">
+            </div>
+
+            <!-- Contenedor que une el Versículo y las primeras dos fotos (polaroid) -->
+            <div class="verse-photos-container">
+                <div class="bible-section-inline">
+                    <p class="bible-verse">
+                        "El Señor te bendiga y te guarde; haga resplandecer su rostro sobre ti y te conceda su paz."
+                    </p>
+                    <span class="bible-ref">(Números 6:24-26)</span>
                 </div>
-                <div class="polaroid-card tilt-right">
-                    <img src="fondo1.jpg" alt="Nicole">
+
+                <div class="polaroid-container">
+                    <div class="polaroid-card tilt-left">
+                        <img src="foto1.jpg" alt="Nicole foto 1">
+                    </div>
+                    <div class="polaroid-card tilt-right">
+                        <img src="foto2.jpg" alt="Nicole foto 2">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección 2: Versículo Bíblico -->
-        <section class="bible-section">
-            <p class="bible-verse">
-                "El Señor te bendiga y te guarde; haga resplandecer su rostro sobre ti y te conceda su paz."
-            </p>
-            <span class="bible-ref">(Números 6:24-26)</span>
-        </section>
-
-        <!-- Sección 3: Fecha del Evento -->
+        <!-- Sección 2: Fecha del Evento -->
         <section class="date-display-section">
             <p class="month-label">Noviembre</p>
             <div class="date-box-custom">
@@ -72,7 +76,7 @@
             <p class="year-label">2026</p>
         </section>
 
-        <!-- Sección 4: Cuenta Regresiva -->
+        <!-- Sección 3: Cuenta Regresiva -->
         <section class="countdown-section">
             <div id="countdown" class="countdown-grid">
                 <div class="time-box">
@@ -92,7 +96,7 @@
             </div>
         </section>
 
-        <!-- Sección 5: Ubicación / Dónde -->
+        <!-- Sección 4: Ubicación / Dónde -->
         <section class="location-section">
             <div class="icon-party">🎉</div>
             <h3 class="section-subtitle">Lugar del evento:</h3>
@@ -100,7 +104,7 @@
             <a href="https://www.google.com/maps/place/Catamarca+1540,+C1246+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.6280964,-58.4048353,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccb1c771a4bbf:0x97a075f8cc40fa1d!8m2!3d-34.6281008!4d-58.402255!16s%2Fg%2F11cpnz_938?entry=ttu" target="_blank" class="btn-location">Ver Ubicación</a>
         </section>
 
-        <!-- Sección 6: Dress Code y Regalos -->
+        <!-- Sección 5: Dress Code y Regalos -->
         <section class="info-details-section">
             <div class="info-block">
                 <div class="icon-symbol">👗👠</div>
@@ -116,14 +120,17 @@
             </div>
         </section>
 
-<!-- Sección 7: Fotos Finales y Confirmación -->
+        <!-- Sección 6: Fotos Finales (foto3, foto4, foto5) y Confirmación -->
         <section class="final-section">
             <div class="polaroid-container bottom-polaroids">
+                <div class="polaroid-card tilt-left">
+                    <img src="foto3.jpg" alt="Nicole foto 3">
+                </div>
                 <div class="polaroid-card tilt-right">
-                    <img src="fondo1.jpg" alt="Nicole">
+                    <img src="foto4.jpg" alt="Nicole foto 4">
                 </div>
                 <div class="polaroid-card tilt-left">
-                    <img src="fondo1.jpg" alt="Nicole">
+                    <img src="foto5.jpg" alt="Nicole foto 5">
                 </div>
             </div>
 
