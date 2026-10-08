@@ -5,14 +5,15 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
     background-image: url('fondo1.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #1b365d; /* Texto oscuro elegante para fondo claro */
-    text-align: center;
-    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333; /* O el color de texto oscuro que estés usando */
 }
 
 /* Pantalla de bienvenida con overlay oscuro para resaltar */
