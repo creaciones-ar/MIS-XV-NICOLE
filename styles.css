@@ -15,7 +15,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Clase para bloquear el scroll mientras la portada está abierta */
 body.welcome-active {
     overflow: hidden;
     height: 100vh;
@@ -103,9 +102,9 @@ body.welcome-active {
     margin-top: 15px;
 }
 
-/* Secciones generales: Margen superior generoso para que no se corte arriba */
+/* Secciones generales */
 section {
-    padding: 90px 20px 40px 20px;
+    padding: 70px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -117,15 +116,15 @@ section {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #1b365d;
     text-align: center;
 }
 
 .name-balloons-container {
     width: 100%;
-    max-width: 450px;
-    margin: 10px auto 5px auto;
+    max-width: 420px;
+    margin: 0 auto 20px auto;
     text-align: center;
     padding: 0 15px;
 }
@@ -136,68 +135,50 @@ section {
     display: block;
 }
 
-/* Versículo y fotos superiores */
-.verse-photos-asymmetric {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    max-width: 1000px;
-    margin: 10px auto;
-    padding: 0 15px;
-    width: 100%;
-}
-
-.bible-section-left {
-    flex: 1;
-    max-width: 450px;
+/* Versículo centrado */
+.bible-section-centered {
+    max-width: 500px;
     text-align: center;
+    padding: 0 20px;
+    margin: 10px auto;
 }
 
-.bible-section-left .bible-verse {
+.bible-verse {
     font-family: 'Great Vibes', cursive;
-    font-size: 1.9rem;
-    line-height: 1.35;
+    font-size: 1.8rem;
+    line-height: 1.4;
     color: #1b365d;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.bible-section-left .bible-ref {
+.bible-ref {
     font-size: 0.8rem;
     letter-spacing: 2px;
     color: #4a5568;
     display: block;
 }
 
-.polaroid-stack-right {
+/* Sección de fotos apiladas una debajo de otra (según referencia exacta) */
+.photos-stack-section {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
 }
 
 /* Estilo Polaroid */
-.polaroid-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px 0;
-    width: 100%;
-    padding: 0 15px;
-}
-
 .polaroid-card {
     background: #ffffff;
-    padding: 8px 8px 25px 8px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    width: 160px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 220px;
     border-radius: 4px;
 }
 
 .polaroid-card img {
     width: 100%;
-    height: 180px;
+    height: 240px;
     object-fit: cover;
     display: block;
 }
@@ -212,7 +193,7 @@ section {
 
 /* Fecha personalizada */
 .date-display-section {
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -220,7 +201,7 @@ section {
     font-size: 1.1rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #1b365d;
     font-weight: 600;
 }
@@ -233,7 +214,7 @@ section {
 }
 
 .side-label {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #1b365d;
@@ -243,11 +224,11 @@ section {
 .date-frame {
     border-top: 2px solid #1b365d;
     border-bottom: 2px solid #1b365d;
-    padding: 8px 20px;
+    padding: 10px 25px;
 }
 
 .date-frame h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: #1b365d;
 }
@@ -255,79 +236,97 @@ section {
 .year-label {
     font-size: 1rem;
     letter-spacing: 4px;
-    margin-top: 10px;
+    margin-top: 15px;
     color: #1b365d;
     font-weight: 600;
 }
 
 /* Cuenta regresiva */
+.section-subtitle-small {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #1b365d;
+}
+
 .countdown-grid {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 15px;
     margin: 10px 0;
 }
 
 .time-box span {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #1b365d;
 }
 
 .time-box p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 2px;
-    margin-top: 4px;
+    margin-top: 5px;
     color: #4a5568;
 }
 
 .separator {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 600;
     position: relative;
-    top: -8px;
+    top: -10px;
     color: #1b365d;
 }
 
-/* Secciones de texto, ubicación y detalles */
-.location-section, .info-details-section {
+/* Ubicación */
+.location-section {
     padding: 40px 20px;
     text-align: center;
 }
 
-.icon-party, .icon-symbol {
-    font-size: 2.2rem;
+.location-photo {
+    margin-bottom: 25px;
+}
+
+.location-content-box {
+    text-align: center;
+    max-width: 450px;
+}
+
+.icon-party {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .section-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 10px;
     color: #1b365d;
 }
 
 .location-name {
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 1px;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #1b365d;
     font-weight: 600;
     padding: 0 10px;
+    line-height: 1.4;
 }
 
 .btn-location, .btn-confirm {
     background: transparent;
     border: 2px solid #1b365d;
     color: #1b365d;
-    padding: 10px 30px;
-    font-size: 0.75rem;
+    padding: 12px 35px;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     font-weight: 600;
-    border-radius: 25px;
+    border-radius: 30px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.3s ease;
@@ -339,24 +338,46 @@ section {
     color: #ffffff;
 }
 
+/* Iconos personalizados GIF (icono2 y icono3) */
+.custom-icon-container {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-gif-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.info-details-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
 .info-block {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     max-width: 450px;
     text-align: center;
     padding: 0 15px;
 }
 
 .info-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    line-height: 1.6;
+    margin-bottom: 12px;
     text-transform: uppercase;
     color: #4a5568;
 }
 
 .alias-text {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: #1b365d;
@@ -364,90 +385,74 @@ section {
 
 /* Sección final */
 .final-section {
-    padding-bottom: 60px;
+    padding: 30px 20px 70px 20px;
     text-align: center;
+}
+
+.bottom-polaroids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
 .rsvp-container {
     background: rgba(27, 54, 93, 0.05);
     border: 1px solid rgba(27, 54, 93, 0.2);
-    padding: 30px 20px;
+    padding: 35px 20px;
     width: 90%;
     max-width: 450px;
-    margin: 20px auto 0 auto;
+    margin: 10px auto 0 auto;
     border-radius: 8px;
 }
 
 .rsvp-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-weight: 400;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #1b365d;
 }
 
 .rsvp-desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #4a5568;
+    line-height: 1.5;
 }
 
 /* ========================================================
-   ADAPTABILIDAD PARA CELULARES (Pantallas menores a 768px)
+   ADAPTABILIDAD PARA CELULARES (Móviles)
    ======================================================== */
 @media screen and (max-width: 768px) {
-    /* Las ponemos en fila para que las fotos queden al costado del versículo en móvil */
-    .verse-photos-asymmetric {
-        flex-direction: row; 
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        padding: 0 5px;
-    }
-
-    .bible-section-left {
-        flex: 1.3;
-        text-align: left;
-    }
-
-    .bible-section-left .bible-verse {
-        font-size: 1.1rem; /* Letra un poco más compacta para que entre perfecto */
-        line-height: 1.25;
-    }
-
-    .bible-section-left .bible-ref {
-        font-size: 0.65rem;
-    }
-
-    .polaroid-stack-right {
-        flex: 0.9;
-        display: flex;
-        flex-direction: column; /* Las dos fotos una arriba de la otra pero al lado del texto */
-        gap: 6px;
-        align-items: center;
+    section {
+        padding: 50px 15px;
     }
 
     .polaroid-card {
-        width: 100px; /* Tamaño compacto ideal para que entren sin desbordar */
-        padding: 4px 4px 12px 4px;
-        transform: rotate(0deg) !important;
+        width: 190px;
+        padding: 8px 8px 25px 8px;
     }
 
     .polaroid-card img {
-        height: 100px;
-    }
-
-    section {
-        padding: 60px 10px 25px 10px;
+        height: 200px;
     }
 
     .top-subtitle {
-        font-size: 2rem;
-        margin-bottom: 10px;
+        font-size: 2.2rem;
+    }
+
+    .bible-verse {
+        font-size: 1.5rem;
     }
 
     .date-frame h2 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+
+    .time-box span, .separator {
+        font-size: 1.8rem;
     }
 }
