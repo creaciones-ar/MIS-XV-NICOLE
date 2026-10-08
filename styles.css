@@ -1,4 +1,4 @@
-* {
+- {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -285,7 +285,7 @@ section {
     color: #1b365d;
 }
 
-/* Ubicación */
+/* Ubicación tradicional (por si se usa en otro lado) */
 .location-section {
     padding: 40px 20px;
     text-align: center;
@@ -293,11 +293,6 @@ section {
 
 .location-photo {
     margin-bottom: 25px;
-}
-
-.location-content-box {
-    text-align: center;
-    max-width: 450px;
 }
 
 .section-subtitle {
@@ -425,7 +420,7 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD PARA CELULARES
+   ADAPTABILIDAD GENERAL PARA CELULARES
    ======================================================== */
 @media screen and (max-width: 768px) {
     section {
@@ -458,50 +453,61 @@ section {
     }
 }
 
-/* Estilo para la sección de ubicación lado a lado (como en tu referencia) */
+/* ========================================================
+   SECCIÓN DE UBICACIÓN LADO A LADO (Estilo Referencia Compacto)
+   ======================================================== */
 .location-section-horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 40px;
-    padding: 60px 20px;
-    max-width: 1000px;
+    gap: 30px;
+    padding: 50px 15px;
+    max-width: 750px;
     margin: 0 auto;
 }
 
 .location-photo-wrapper {
-    flex: 1;
+    flex: 0 0 45%;
     display: flex;
     justify-content: flex-end;
 }
 
 .torn-edge-photo {
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
     height: auto;
     display: block;
-    /* Si la subes en PNG con transparencia y el borde rasgado, se verá idéntico a tu referencia */
 }
 
 .location-section-horizontal .location-content-box {
-    flex: 1;
+    flex: 0 0 50%;
     text-align: left;
 }
 
-/* Adaptabilidad para celulares: si la pantalla es chica, se acomodan uno debajo de otro */
+.location-section-horizontal .custom-icon-container {
+    margin: 0 0 5px 0;
+}
+
+/* Adaptabilidad para celulares de la sección de ubicación */
 @media screen and (max-width: 768px) {
     .location-section-horizontal {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .location-photo-wrapper {
         justify-content: center;
+        flex: 1;
     }
 
     .location-section-horizontal .location-content-box {
         text-align: center;
+        flex: 1;
+    }
+
+    .location-section-horizontal .custom-icon-container {
+        margin: 0 auto 5px auto;
     }
 }
