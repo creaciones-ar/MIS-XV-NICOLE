@@ -590,20 +590,68 @@ section {
     box-shadow: 0 6px 12px rgba(0,0,0,0.25) !important;
 }
 
-/* Adaptabilidad para celulares */
+/* ========================================================
+   ADAPTABILIDAD PARA CELULARES (Móviles)
+   ======================================================== */
 @media screen and (max-width: 768px) {
+    section {
+        padding: 50px 15px;
+    }
+
+    .polaroid-card {
+        width: 190px;
+        padding: 8px 8px 25px 8px;
+    }
+
+    .polaroid-card img {
+        height: 200px;
+    }
+
+    .top-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .bible-verse {
+        font-size: 1.5rem;
+    }
+
+    .date-frame h2 {
+        font-size: 2.8rem;
+    }
+
+    .time-box span, .separator {
+        font-size: 1.8rem;
+    }
+
+    /* Corrección clave para la sección de ubicación en celulares */
     .location-section-horizontal {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .location-photo-wrapper {
-        justify-content: center;
-        flex: 1;
-    }
-    .location-content-box {
-        flex: 1;
-        align-items: center !important;
+        flex-direction: column !important; /* Se apilan ordenadamente en vertical */
         text-align: center !important;
+        gap: 15px !important;
+        padding: 30px 10px !important;
+    }
+
+    .location-photo-wrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .torn-edge-photo {
+        max-width: 240px !important; /* Tamaño perfecto para que luzca bien en cualquier celular */
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .location-content-box {
+        width: 100% !important;
+        flex: none !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .location-section-horizontal .location-name {
+        font-size: 0.95rem !important; /* Evita que el nombre del salón se corte en pantallas chicas */
+        padding: 0 5px !important;
     }
 }
