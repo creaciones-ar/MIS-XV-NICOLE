@@ -512,7 +512,7 @@ section {
     }
 }
 
-/* Línea decorativa azul superior */
+/* Línea decorativa superior */
 .section-divider-line {
     width: 80px;
     height: 2px;
@@ -520,7 +520,7 @@ section {
     margin: 40px auto 10px auto;
 }
 
-/* Estructura de la sección lado a lado */
+/* Sección de ubicación */
 .location-section-horizontal {
     display: flex;
     flex-direction: row;
@@ -545,21 +545,52 @@ section {
     display: block;
 }
 
-/* Caja de contenido de texto centrada */
+/* Caja de contenido alineada a la izquierda (bajo el icono) */
 .location-content-box {
     flex: 0 0 50%;
+    text-align: left !important; /* Letras alineadas a la izquierda junto con el icono */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important; /* Todo el bloque se alinea a la izquierda de forma limpia */
+}
+
+/* Icono alineado a la izquierda */
+.location-content-box .location-icon-img {
+    width: 55px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 0 15px 0 !important; /* Alineado a la izquierda, sin centrar automático */
+}
+
+/* Títulos y textos alineados a la izquierda */
+.location-section-horizontal .section-subtitle,
+.location-section-horizontal .location-name {
+    text-align: left !important;
+    width: 100%;
+}
+
+/* Recuperar el diseño original del botón de ubicación */
+.location-section-horizontal .location-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+    background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+    color: #1a1a1a !important;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 1px solid #b5b5b5;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
-/* Tamaño controlado y centrado perfecto para el icono4 */
-.location-content-box .location-icon-img {
-    width: 60px !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto 10px auto !important;
+.location-section-horizontal .location-btn:hover {
+    background: linear-gradient(to bottom, #f0f0f0, #cccccc);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
 }
 
-/* Estilo para celulares */
+/* Adaptabilidad para celulares */
 @media screen and (max-width: 768px) {
     .location-section-horizontal {
         flex-direction: column;
@@ -572,6 +603,14 @@ section {
     }
     .location-content-box {
         flex: 1;
-        text-align: center;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    .location-content-box .location-icon-img {
+        margin: 0 auto 15px auto !important;
+    }
+    .location-section-horizontal .section-subtitle,
+    .location-section-horizontal .location-name {
+        text-align: center !important;
     }
 }
