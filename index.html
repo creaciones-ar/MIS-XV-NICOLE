@@ -1,106 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis 15 - Plantilla Base</title>
-
-  <!-- Fuentes Elegantes -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Íconos FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años - Nicole</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- MÚSICA DE FONDO (Reemplazar TU-USUARIO por tu usuario de GitHub) -->
-  <audio id="musica" loop preload="auto">
-    <source src="https://TU-USUARIO.github.io/INVITACION-MIS-15/musica.mp3" type="audio/mpeg">
-  </audio>
+    <!-- Pantalla de Entrada / Reproductor inicial -->
+    <div id="welcome-screen">
+        <div class="welcome-content">
+            <h1 class="welcome-top-title">It's my birthday</h1>
+            <h2 class="welcome-main-title">NICOLE FEST</h2>
+            <p class="welcome-instruction">Presoná PLAY para reproducir la canción</p>
+            
+            <div class="player-box">
+                <div class="player-controls-line"></div>
+                <div class="player-buttons">
+                    <span>🔀</span>
+                    <span>⏮️</span>
+                    <button id="open-btn" class="play-circle-btn">▶️</button>
+                    <span>⏭️</span>
+                    <span>🔁</span>
+                </div>
+            </div>
 
-  <!-- PANTALLA DE BIENVENIDA -->
-  <div id="overlay" class="overlay">
-    <div class="sobre-box">
-      <img src="imagenprimera.jpg" alt="Portada de bienvenida" class="foto-portada-sobre">
-      <button onclick="abrirInvitacion()" class="btn-abrir">✨ Ingresar ✨</button>
-    </div>
-  </div>
-
-  <!-- LLUVIA DE ESTRELLAS -->
-  <div id="estrellas-container"></div>
-
-  <!-- CONTENIDO PRINCIPAL -->
-  <div class="main-container">
-
-    <!-- PORTADA -->
-    <div class="seccion-portada">
-      <img src="imagenprimera.jpg" alt="Portada Mis 15" class="foto-portada">
-    </div>
-
-    <!-- FRASE PRINCIPAL -->
-    <div class="seccion frase-box">
-      <p class="frase-texto">✨ Una noche mágica me espera... y quiero que seas parte, para compartir juntos momentos inolvidables que quedarán para siempre en mi corazón ✨</p>
+            <div class="guest-card-ref">
+                <p>TENEMOS 1 LUGAR RESERVADO PARA VOS</p>
+            </div>
+        </div>
     </div>
 
-    <!-- CONTADOR REGRESIVO -->
-    <div class="seccion contador-seccion">
-      <h3 class="titulo-faltan">Faltan:</h3>
-      <div id="cuenta-regresiva" class="clock-container">
-        <div class="time-block"><span id="dias">00</span><small>DÍAS</small></div>
-        <div class="time-block"><span id="horas">00</span><small>HORAS</small></div>
-        <div class="time-block"><span id="minutos">00</span><small>MINUTOS</small></div>
-        <div class="time-block"><span id="segundos">00</span><small>SEGUNDOS</small></div>
-      </div>
-    </div>
+    <!-- Audio de fondo -->
+    <audio id="background-music" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
-    <!-- FECHA Y UBICACIÓN -->
-    <div class="seccion info-evento">
-      <h2 class="fecha-linea">✨ 15 Noviembre 2026 - 21:00 hs ✨</h2>
-      <p class="direccion-texto">Catamarca 1540</p>
-      <a class="btn-ubicacion" href="https://www.google.com/maps/place/Catamarca+1540,+C1246+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/" target="_blank">
-        Ver ubicación
-      </a>
-    </div>
+    <!-- Contenido Principal -->
+    <main id="main-content" class="hidden">
 
-    <!-- GALERÍA VERTICAL (10 FOTOS) -->
-    <div class="seccion galeria">
-      <div class="galeria-vertical">
-        <img src="foto 1.jpg" alt="Foto 1">
-        <img src="foto 2.jpg" alt="Foto 2">
-        <img src="foto 3.jpg" alt="Foto 3">
-        <img src="foto 4.jpg" alt="Foto 4">
-        <img src="foto 5.jpg" alt="Foto 5">
-        <img src="foto 6.jpg" alt="Foto 6">
-        <img src="foto 7.jpg" alt="Foto 7">
-        <img src="foto 8.jpg" alt="Foto 8">
-        <img src="foto 9.jpg" alt="Foto 9">
-        <img src="foto 10.jpg" alt="Foto 10">
-      </div>
-    </div>
+        <!-- Sección 1: Header / Música -->
+        <section class="hero-music-section">
+            <h1 class="top-subtitle">It's my birthday</h1>
+            <h2 class="main-fest-title">NICOLE FEST</h2>
+            <p class="play-instruction">Reproduciendo música</p>
+            
+            <!-- Fotos estilo Polaroid superiores -->
+            <div class="polaroid-container top-polaroids">
+                <div class="polaroid-card tilt-left">
+                    <img src="foto1.jpg" alt="Nicole">
+                </div>
+                <div class="polaroid-card tilt-right">
+                    <img src="foto2.jpg" alt="Nicole">
+                </div>
+            </div>
+        </section>
 
-    <!-- REGALOS / ALIAS -->
-    <div class="seccion regalos-box">
-      <h2 class="titulo-cursiva">🎁 Regalos</h2>
-      <p class="regalos-p">
-        El mejor regalo es tu presencia, pero si deseás obsequiarme algo, podés hacerlo a través de mi alias de Mercado Pago 💫
-      </p>
-      <div class="alias-card">
-        <p><strong>Alias:</strong> Nicole.aguiar.mis.15</p>
-        <p><strong>Nombre:</strong> Nicole-Aguiar-Ot</p>
-        <p><strong>CVU:</strong> 0000003100055991041744</p>
-      </div>
-    </div>
+        <!-- Sección 2: Versículo Bíblico -->
+        <section class="bible-section">
+            <p class="bible-verse">
+                "El Señor te bendiga y te guarde; haga resplandecer su rostro sobre ti y te conceda su paz."
+            </p>
+            <span class="bible-ref">(Números 6:24-26)</span>
+        </section>
 
-    <!-- CONFIRMACIÓN POR WHATSAPP -->
-    <div class="seccion rsvp-box">
-      <p class="frase-texto">✨ Nos encantaría contar con tu presencia ✨</p>
-      <a class="btn-wsp" href="https://wa.me/541156167548?text=Hola%20confirmo%20mi%20asistencia%20a%20los%2015%20de%20Nicole%20✨" target="_blank">
-        <i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>Confirmar asistencia
-      </a>
-    </div>
+        <!-- Sección 3: Fecha del Evento -->
+        <section class="date-display-section">
+            <p class="month-label">Noviembre</p>
+            <div class="date-box-custom">
+                <span class="side-label">SÁBADO</span>
+                <div class="date-frame">
+                    <h2>14</h2>
+                </div>
+                <span class="side-label">21:00 HS</span>
+            </div>
+            <p class="year-label">2026</p>
+        </section>
 
-  </div>
+        <!-- Sección 4: Cuenta Regresiva -->
+        <section class="countdown-section">
+            <div id="countdown" class="countdown-grid">
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <p>DÍAS</p>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <p>HORAS</p>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <p>MINUTOS</p>
+                </div>
+            </div>
+        </section>
 
-  <script src="script.js"></script>
+        <!-- Sección 5: Ubicación / Dónde -->
+        <section class="location-section">
+            <div class="icon-party">🎉</div>
+            <h3 class="section-subtitle">Lugar del evento:</h3>
+            <p class="location-name">Vía el Cóndor Salón Costa Eventos</p>
+            <a href="https://maps.google.com" target="_blank" class="btn-location">Ver Ubicación</a>
+        </section>
+
+        <!-- Sección 6: Dress Code y Regalos -->
+        <section class="info-details-section">
+            <div class="info-block">
+                <div class="icon-symbol">👗👠</div>
+                <h3 class="section-subtitle">Dress Code</h3>
+                <p class="info-text">ELEGANTE</p>
+            </div>
+
+            <div class="info-block">
+                <div class="icon-symbol">🎁</div>
+                <h3 class="section-subtitle">¡El mejor regalo es tu presencia!</h3>
+                <p class="info-text">Pero si deseas hacerme un obsequio, puedes hacerlo mediante el siguiente ALIAS:</p>
+                <p class="alias-text">nicole.xv</p>
+            </div>
+        </section>
+
+        <!-- Sección 7: Fotos Finales y Confirmación -->
+        <section class="final-section">
+            <div class="polaroid-container bottom-polaroids">
+                <div class="polaroid-card tilt-right">
+                    <img src="foto1.jpg" alt="Nicole">
+                </div>
+                <div class="polaroid-card tilt-left">
+                    <img src="foto2.jpg" alt="Nicole">
+                </div>
+            </div>
+
+            <div class="rsvp-container">
+                <h3 class="rsvp-title">Confirmación de asistencia</h3>
+                <p class="rsvp-desc">¡Espero que puedas compartir conmigo este día tan especial!</p>
+                <a href="https://wa.me/TU_NUMERO_DE_WHATSAPP?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20de%20Nicole." target="_blank" class="btn-confirm">Confirmar</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
