@@ -57,7 +57,7 @@ body {
     font-size: 3.5rem;
     letter-spacing: 4px;
     font-weight: 700;
-    margin-bottom: 15px; /* Controla la distancia hacia el reproductor */
+    margin-bottom: 15px;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
 }
 
@@ -65,7 +65,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 5px 0 10px 0; /* Mantiene el reproductor cerca de los textos */
+    margin: 5px 0 10px 0;
 }
 
 .custom-play-btn {
@@ -84,7 +84,7 @@ body {
 
 .custom-player-img {
     width: 100%;
-    max-width: 180px; /* Tamaño ideal para que no sea gigante */
+    max-width: 180px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -95,7 +95,7 @@ body {
     letter-spacing: 1.5px;
     color: #e2e8f0;
     text-transform: uppercase;
-    margin-top: 5px; /* Pega este texto justo abajo del reproductor */
+    margin-top: 5px;
 }
 
 /* Secciones generales */
@@ -114,21 +114,65 @@ section {
     font-weight: 400;
     margin-bottom: 5px;
     color: #1b365d;
+    text-align: center;
 }
 
-.main-fest-title {
-    font-size: 2.8rem;
-    letter-spacing: 4px;
-    font-weight: 700;
-    margin-bottom: 10px;
+/* Estilo para las letras de globos plateados (Icono4) */
+.name-balloons-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto 40px auto;
+    text-align: center;
+}
+
+.name-balloons-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor asimétrico superior (Versículo a la izquierda, Fotos a la derecha) */
+.verse-photos-asymmetric {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.bible-section-left {
+    flex: 1;
+    min-width: 280px;
+    max-width: 480px;
+    text-align: left;
+}
+
+.bible-section-left .bible-verse {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.3rem;
+    line-height: 1.5;
     color: #1b365d;
+    margin-bottom: 15px;
 }
 
-.play-instruction {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+.bible-section-left .bible-ref {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     color: #4a5568;
-    margin-bottom: 40px;
+    display: block;
+}
+
+.polaroid-stack-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    flex: 0 0 auto;
+    margin: 0 auto;
 }
 
 /* Fotos estilo Polaroid */
@@ -145,13 +189,13 @@ section {
     background: #ffffff;
     padding: 10px 10px 30px 10px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    width: 160px;
+    width: 180px;
     border-radius: 4px;
 }
 
 .polaroid-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     display: block;
 }
@@ -162,28 +206,6 @@ section {
 
 .tilt-right {
     transform: rotate(4deg);
-}
-
-/* Versículo */
-.bible-section {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.bible-verse {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    color: #1b365d;
-}
-
-.bible-ref {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    color: #4a5568;
 }
 
 /* Fecha personalizada */
@@ -365,52 +387,5 @@ section {
     font-size: 0.85rem;
     letter-spacing: 1px;
     margin-bottom: 25px;
-    color: #4a5568;
-}
-
-/* Estilo para las letras de globos plateados (Icono4) */
-.name-balloons-container {
-    width: 100%;
-    max-width: 480px;
-    margin: 10px auto 30px auto;
-    text-align: center;
-}
-
-.name-balloons-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Contenedor que une el versículo y las primeras fotos */
-.verse-photos-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    max-width: 950px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.bible-section-inline {
-    flex: 1;
-    min-width: 280px;
-    max-width: 450px;
-    text-align: center;
-}
-
-.verse-photos-container .bible-verse {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.3rem;
-    line-height: 1.4;
-    color: #1b365d;
-    margin-bottom: 10px;
-}
-
-.verse-photos-container .bible-ref {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
     color: #4a5568;
 }
