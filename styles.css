@@ -57,20 +57,20 @@ body.welcome-active {
     text-align: center;
 }
 
-.welcome-top-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    font-weight: 400;
-    margin-bottom: 0px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
 .welcome-main-title {
     font-size: 3.2rem;
     letter-spacing: 4px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
+.welcome-top-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .player-box {
@@ -103,7 +103,7 @@ body.welcome-active {
     margin-top: 15px;
 }
 
-/* Secciones generales: Margen superior generoso para que no se corte la corona */
+/* Secciones generales: Margen superior generoso para que no se corte arriba */
 section {
     padding: 90px 20px 40px 20px;
     width: 100%;
@@ -117,7 +117,7 @@ section {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     color: #1b365d;
     text-align: center;
 }
@@ -125,7 +125,7 @@ section {
 .name-balloons-container {
     width: 100%;
     max-width: 450px;
-    margin: 10px auto 25px auto;
+    margin: 10px auto 5px auto;
     text-align: center;
     padding: 0 15px;
 }
@@ -397,44 +397,54 @@ section {
    ADAPTABILIDAD PARA CELULARES (Pantallas menores a 768px)
    ======================================================== */
 @media screen and (max-width: 768px) {
+    /* Las ponemos en fila para que las fotos queden al costado del versículo en móvil */
     .verse-photos-asymmetric {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 5px;
     }
 
     .bible-section-left {
-        text-align: center;
-        max-width: 100%;
-        margin: 0 auto;
+        flex: 1.3;
+        text-align: left;
     }
 
     .bible-section-left .bible-verse {
-        font-size: 1.7rem;
+        font-size: 1.1rem; /* Letra un poco más compacta para que entre perfecto */
+        line-height: 1.25;
     }
 
-    /* Ajustamos el contenedor y tamaño de las fotos para que entren perfecto lado a lado en el celular */
+    .bible-section-left .bible-ref {
+        font-size: 0.65rem;
+    }
+
     .polaroid-stack-right {
-        justify-content: center;
-        width: 100%;
-        gap: 10px;
+        flex: 0.9;
+        display: flex;
+        flex-direction: column; /* Las dos fotos una arriba de la otra pero al lado del texto */
+        gap: 6px;
+        align-items: center;
     }
 
     .polaroid-card {
-        width: 135px; /* Hacemos las tarjetas un poquito más compactas */
-        padding: 6px 6px 18px 6px;
+        width: 100px; /* Tamaño compacto ideal para que entren sin desbordar */
+        padding: 4px 4px 12px 4px;
+        transform: rotate(0deg) !important;
     }
 
     .polaroid-card img {
-        height: 140px; /* Ajustamos la altura de la foto */
+        height: 100px;
     }
 
     section {
-        padding: 70px 10px 30px 10px;
+        padding: 60px 10px 25px 10px;
     }
 
     .top-subtitle {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        margin-bottom: 10px;
     }
 
     .date-frame h2 {
