@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Si el evento ya pasó
             const countdownContainer = document.getElementById('countdown');
             if (countdownContainer) {
-                countdownContainer.innerHTML = "<p>¡L llegó el gran día!</p>";
+                countdownContainer.innerHTML = "<p>¡Llegó el gran día!</p>";
             }
         }
     }
