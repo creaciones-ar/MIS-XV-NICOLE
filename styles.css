@@ -591,11 +591,11 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD PARA CELULARES (Móviles)
+   ADAPTABILIDAD PARA CELULARES (Lado a lado forzado)
    ======================================================== */
 @media screen and (max-width: 768px) {
     section {
-        padding: 50px 15px;
+        padding: 40px 10px;
     }
 
     .polaroid-card {
@@ -623,35 +623,53 @@ section {
         font-size: 1.8rem;
     }
 
-    /* Corrección clave para la sección de ubicación en celulares */
+    /* Forzar que se mantengan lado a lado en el celular */
     .location-section-horizontal {
-        flex-direction: column !important; /* Se apilan ordenadamente en vertical */
-        text-align: center !important;
-        gap: 15px !important;
-        padding: 30px 10px !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        padding: 20px 5px !important;
+        width: 100% !important;
     }
 
     .location-photo-wrapper {
-        width: 100% !important;
+        flex: 0 0 42% !important;
         display: flex !important;
-        justify-content: center !important;
+        justify-content: flex-end !important;
     }
 
     .torn-edge-photo {
-        max-width: 240px !important; /* Tamaño perfecto para que luzca bien en cualquier celular */
+        max-width: 135px !important; /* Tamaño compacto para que entre al lado del texto */
         width: 100% !important;
         height: auto !important;
     }
 
     .location-content-box {
-        width: 100% !important;
-        flex: none !important;
+        flex: 0 0 55% !important;
         text-align: center !important;
         align-items: center !important;
     }
 
+    .location-content-box .location-icon-img {
+        width: 35px !important; /* Icono más pequeño para celulares */
+        margin: 0 auto 8px auto !important;
+    }
+
+    .location-section-horizontal .section-subtitle {
+        font-size: 1.4rem !important; /* Título cursiva más chico para que no desborde */
+        margin-bottom: 5px !important;
+    }
+
     .location-section-horizontal .location-name {
-        font-size: 0.95rem !important; /* Evita que el nombre del salón se corte en pantallas chicas */
-        padding: 0 5px !important;
+        font-size: 0.75rem !important; /* Texto del salón ajustado al ancho móvil */
+        letter-spacing: 0.5px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .location-section-horizontal .location-btn {
+        padding: 6px 14px !important;
+        font-size: 0.65rem !important;
+        margin-top: 5px !important;
     }
 }
