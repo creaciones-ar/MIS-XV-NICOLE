@@ -1,3 +1,6 @@
+// Bloquear el scroll al cargar la página
+document.body.classList.add('welcome-active');
+
 document.getElementById('open-btn').addEventListener('click', function() {
     const welcomeScreen = document.getElementById('welcome-screen');
     const mainContent = document.getElementById('main-content');
@@ -8,10 +11,11 @@ document.getElementById('open-btn').addEventListener('click', function() {
         console.log("Audio bloqueado por el navegador:", error);
     });
 
-    // Ocultar bienvenida y mostrar contenido principal
+    // Ocultar bienvenida, liberar el scroll del body y mostrar contenido principal
     welcomeScreen.style.opacity = '0';
     setTimeout(() => {
         welcomeScreen.classList.add('hidden');
+        document.body.classList.remove('welcome-active'); // Habilita el desplazamiento normal
         mainContent.classList.remove('hidden');
     }, 600);
 });
