@@ -398,9 +398,9 @@ section {
    ======================================================== */
 @media screen and (max-width: 768px) {
     .verse-photos-asymmetric {
-        flex-direction: column; /* Versículo arriba y fotos abajo */
+        flex-direction: column;
         text-align: center;
-        gap: 25px;
+        gap: 20px;
     }
 
     .bible-section-left {
@@ -413,24 +413,24 @@ section {
         font-size: 1.7rem;
     }
 
+    /* Ajustamos el contenedor y tamaño de las fotos para que entren perfecto lado a lado en el celular */
     .polaroid-stack-right {
         justify-content: center;
         width: 100%;
-        gap: 15px;
+        gap: 10px;
     }
 
-    /* Reducimos un poco el tamaño de las fotos en celulares para que entren bien sin verse gigantes */
     .polaroid-card {
-        width: 140px;
-        padding: 6px 6px 20px 6px;
+        width: 135px; /* Hacemos las tarjetas un poquito más compactas */
+        padding: 6px 6px 18px 6px;
     }
 
     .polaroid-card img {
-        height: 150px;
+        height: 140px; /* Ajustamos la altura de la foto */
     }
 
     section {
-        padding: 70px 15px 30px 15px; /* Espacio superior equilibrado para la corona */
+        padding: 70px 10px 30px 10px;
     }
 
     .top-subtitle {
