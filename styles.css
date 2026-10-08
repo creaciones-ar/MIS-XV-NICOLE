@@ -375,3 +375,50 @@ section {
     margin-bottom: 25px;
     color: #4a5568;
 }
+
+/* Estilo para las letras de globos plateados (Icono4) */
+.name-balloons-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 10px auto 30px auto;
+    text-align: center;
+}
+
+.name-balloons-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor que une el versículo y las primeras fotos */
+.verse-photos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 950px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.bible-section-inline {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    text-align: center;
+}
+
+.verse-photos-container .bible-verse {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.3rem;
+    line-height: 1.4;
+    color: #1b365d;
+    margin-bottom: 10px;
+}
+
+.verse-photos-container .bible-ref {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #4a5568;
+}
