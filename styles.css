@@ -68,7 +68,7 @@ body.welcome-active {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -76,7 +76,7 @@ body.welcome-active {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .custom-play-btn {
@@ -84,22 +84,28 @@ body.welcome-active {
     border: none;
     cursor: pointer;
     padding: 0;
+    transition: transform 0.2s ease;
 }
 
+.custom-play-btn:hover {
+    transform: scale(1.08);
+}
+
+/* AQUÍ AMPLIAMOS EL ICONO1 DE MÚSICA */
 .custom-player-img {
-    width: 140px;
+    width: 220px; /* Aumentado sustancialmente para que no se vea pequeño */
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 6px 15px rgba(0,0,0,0.6));
 }
 
 .welcome-instruction {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
+    font-size: 0.9rem;
+    letter-spacing: 2.5px;
     color: #e2e8f0;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /* Secciones generales */
@@ -158,7 +164,7 @@ section {
     display: block;
 }
 
-/* Sección de fotos apiladas una debajo de otra (según referencia exacta) */
+/* Sección de fotos apiladas una debajo de otra */
 .photos-stack-section {
     display: flex;
     flex-direction: column;
@@ -294,11 +300,6 @@ section {
     max-width: 450px;
 }
 
-.icon-party {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
 .section-subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
@@ -338,7 +339,7 @@ section {
     color: #ffffff;
 }
 
-/* Iconos personalizados GIF (icono2 y icono3) */
+/* Contenedor de iconos GIF personalizados */
 .custom-icon-container {
     width: 70px;
     height: 70px;
@@ -424,7 +425,7 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD PARA CELULARES (Móviles)
+   ADAPTABILIDAD PARA CELULARES
    ======================================================== */
 @media screen and (max-width: 768px) {
     section {
