@@ -6,24 +6,23 @@
 
 body {
     background-image: url('fondo1.jpg');
-    background-size: cover;          /* Cubre toda la pantalla de forma uniforme */
-    background-position: center;     /* Centra la imagen perfectamente */
-    background-repeat: no-repeat;    /* Evita que la imagen se repita en mosaico */
-    background-attachment: fixed;    /* Mantiene el fondo fijo mientras haces scroll */
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
     color: #333;
+    overflow-x: hidden;
 }
 
-/* Pantalla de bienvenida en columna vertical y centrada */
+/* Pantalla de bienvenida */
 #welcome-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('fondo3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -31,7 +30,7 @@ body {
     align-items: center;
     z-index: 9999;
     transition: opacity 0.6s ease;
-    padding: 15px;
+    padding: 20px;
     color: #ffffff;
 }
 
@@ -47,17 +46,17 @@ body {
 
 .welcome-top-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-bottom: 0px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .welcome-main-title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     letter-spacing: 4px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
 }
 
@@ -65,7 +64,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 5px 0 10px 0;
+    margin: 10px 0;
 }
 
 .custom-play-btn {
@@ -73,34 +72,27 @@ body {
     border: none;
     cursor: pointer;
     padding: 0;
-    display: inline-block;
-    margin: 0 auto;
-    transition: transform 0.2s ease;
-}
-
-.custom-play-btn:hover {
-    transform: scale(1.05);
 }
 
 .custom-player-img {
-    width: 100%;
-    max-width: 180px;
+    width: 140px;
     height: auto;
     display: block;
     margin: 0 auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
 }
 
 .welcome-instruction {
-    font-size: 0.9rem;
-    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     color: #e2e8f0;
     text-transform: uppercase;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 /* Secciones generales */
 section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -110,19 +102,19 @@ section {
 
 .top-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 5px;
     color: #1b365d;
     text-align: center;
 }
 
-/* Estilo para las letras de globos plateados (Icono4) */
 .name-balloons-container {
     width: 100%;
-    max-width: 600px;
-    margin: 10px auto 40px auto;
+    max-width: 450px;
+    margin: 10px auto 30px auto;
     text-align: center;
+    padding: 0 15px;
 }
 
 .name-balloons-img {
@@ -131,35 +123,34 @@ section {
     display: block;
 }
 
-/* Contenedor asimétrico superior (Versículo a la izquierda, Fotos a la derecha) */
+/* Versículo y fotos superiores: Adaptable PC / Celular */
 .verse-photos-asymmetric {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; /* Evita que bajen si hay espacio */
-    gap: 60px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 0 15px;
     width: 100%;
 }
 
 .bible-section-left {
     flex: 1;
-    max-width: 500px;
+    max-width: 450px;
     text-align: left;
 }
 
 .bible-section-left .bible-verse {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     line-height: 1.4;
     color: #1b365d;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .bible-section-left .bible-ref {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     color: #4a5568;
     display: block;
@@ -167,13 +158,12 @@ section {
 
 .polaroid-stack-right {
     display: flex;
-    flex-direction: row; /* Las dos fotos polaroid una al lado de la otra */
-    align-items: center;
-    gap: 20px;
-    flex: 0 0 auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* Fotos estilo Polaroid */
+/* Estilo Polaroid */
 .polaroid-container {
     display: flex;
     justify-content: center;
@@ -181,42 +171,43 @@ section {
     flex-wrap: wrap;
     margin: 20px 0;
     width: 100%;
+    padding: 0 15px;
 }
 
 .polaroid-card {
     background: #ffffff;
-    padding: 10px 10px 30px 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    width: 180px;
+    padding: 8px 8px 25px 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 160px;
     border-radius: 4px;
 }
 
 .polaroid-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     display: block;
 }
 
 .tilt-left {
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
 }
 
 .tilt-right {
-    transform: rotate(4deg);
+    transform: rotate(3deg);
 }
 
 /* Fecha personalizada */
 .date-display-section {
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .month-label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #1b365d;
     font-weight: 600;
 }
@@ -225,11 +216,11 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .side-label {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #1b365d;
@@ -239,20 +230,19 @@ section {
 .date-frame {
     border-top: 2px solid #1b365d;
     border-bottom: 2px solid #1b365d;
-    padding: 10px 25px;
+    padding: 8px 20px;
 }
 
 .date-frame h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
-    letter-spacing: 2px;
     color: #1b365d;
 }
 
 .year-label {
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 4px;
-    margin-top: 15px;
+    margin-top: 10px;
     color: #1b365d;
     font-weight: 600;
 }
@@ -262,64 +252,65 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 10px 0;
 }
 
 .time-box span {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: #1b365d;
 }
 
 .time-box p {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     letter-spacing: 2px;
-    margin-top: 5px;
+    margin-top: 4px;
     color: #4a5568;
 }
 
 .separator {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     position: relative;
-    top: -10px;
+    top: -8px;
     color: #1b365d;
 }
 
-/* Sección ubicación y detalles */
+/* Secciones de texto, ubicación y detalles */
 .location-section, .info-details-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .icon-party, .icon-symbol {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
 }
 
 .section-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: #1b365d;
 }
 
 .location-name {
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     color: #1b365d;
     font-weight: 600;
+    padding: 0 10px;
 }
 
 .btn-location, .btn-confirm {
     background: transparent;
     border: 2px solid #1b365d;
     color: #1b365d;
-    padding: 12px 35px;
+    padding: 10px 30px;
     font-size: 0.75rem;
     letter-spacing: 2px;
     font-weight: 600;
@@ -336,22 +327,23 @@ section {
 }
 
 .info-block {
-    margin-bottom: 50px;
-    max-width: 500px;
+    margin-bottom: 35px;
+    max-width: 450px;
     text-align: center;
+    padding: 0 15px;
 }
 
 .info-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
     text-transform: uppercase;
     color: #4a5568;
 }
 
 .alias-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: #1b365d;
@@ -359,31 +351,67 @@ section {
 
 /* Sección final */
 .final-section {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     text-align: center;
 }
 
 .rsvp-container {
     background: rgba(27, 54, 93, 0.05);
     border: 1px solid rgba(27, 54, 93, 0.2);
-    padding: 40px 20px;
-    width: 100%;
-    max-width: 500px;
-    margin-top: 30px;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto 0 auto;
     border-radius: 8px;
 }
 
 .rsvp-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #1b365d;
 }
 
 .rsvp-desc {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: #4a5568;
+}
+
+/* ========================================================
+   ADAPTABILIDAD PARA CELULARES (Pantallas menores a 768px)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+    .verse-photos-asymmetric {
+        flex-direction: column; /* Pone el texto arriba y las fotos abajo en columna */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .bible-section-left {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .bible-section-left .bible-verse {
+        font-size: 1.9rem;
+    }
+
+    .polaroid-stack-right {
+        justify-content: center;
+    }
+
+    section {
+        padding: 35px 15px;
+    }
+
+    .top-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .date-frame h2 {
+        font-size: 2.5rem;
+    }
 }
