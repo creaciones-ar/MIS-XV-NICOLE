@@ -32,7 +32,7 @@ main#main-content {
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA (Con tu foto de fondo real y luminosa)
+   PANTALLA DE BIENVENIDA (Usando tu fondo3.png real y luminoso)
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -41,10 +41,11 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    /* Filtro sutil y elegante que deja respirar los colores de fondo3.jpg */
-    background-image: linear-gradient(rgba(27, 54, 93, 0.15), rgba(0, 0, 0, 0.35)), url('fondo3.jpg');
+    /* Usamos fondo3.png con un filtro ultra sutil para que los colores de tu imagen brillen con elegancia */
+    background-image: linear-gradient(rgba(27, 54, 93, 0.1), rgba(0, 0, 0, 0.25)), url('fondo3.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +99,7 @@ main#main-content {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Reproductor de bienvenida sin fondos cuadrados blancos */
+/* Botón de reproducción limpio */
 .player-box {
     width: 100%;
     display: flex;
@@ -125,9 +126,7 @@ main#main-content {
     display: block;
     margin: 0 auto;
     background: transparent !important;
-    /* Truco CSS: Si el icono tiene fondo blanco, esto lo vuelve transparente automáticamente */
-    mix-blend-mode: multiply; 
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
 }
 
 /* ========================================================
@@ -490,9 +489,12 @@ section {
 @media screen and (max-width: 768px) {
     main#main-content {
         max-width: 100% !important;
-        background-color: transparent !important; /* Elimina la franja blanca a los costados en móvil */
+        background-color: transparent !important; /* Elimina la franja blanca a los costados en el celular */
         box-shadow: none !important;
     }
+    
+    /* El resto de tus reglas móviles se mantienen igual... */
+}
 
     section {
         padding: 45px 15px;
