@@ -32,7 +32,7 @@ main#main-content {
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA (Luminosa, sin opacidad y perfecta)
+   PANTALLA DE BIENVENIDA (Fondo elegante y lujoso de alta gama)
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -41,8 +41,8 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    /* Eliminamos cualquier filtro oscuro pesado para que el fondo luzca radiante y con sus colores reales */
-    background-image: linear-gradient(rgba(27, 54, 93, 0.1), rgba(0, 0, 0, 0.2)), url('fondo3.jpg');
+    /* Fondo de lujo con un degradado sofisticado en tonos azul marino profundo y toques atmosféricos */
+    background: linear-gradient(135deg, #0b1d3a 0%, #1b365d 50%, #070e18 100%);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -50,8 +50,14 @@ main#main-content {
     align-items: center;
     z-index: 99999;
     transition: opacity 0.6s ease, visibility 0.6s ease;
-    padding: 25px;
+    padding: 20px;
     color: #ffffff;
+}
+
+#welcome-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .welcome-content {
@@ -59,22 +65,28 @@ main#main-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 550px;
+    max-width: 500px;
     width: 100%;
     text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .welcome-top-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 400;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     color: #ffffff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .welcome-main-title {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     letter-spacing: 6px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -83,15 +95,15 @@ main#main-content {
 }
 
 .welcome-instruction {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #e2e8f0;
     text-transform: uppercase;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-weight: 600;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
-/* Contenedor del botón sin fondos blancos cuadrados */
+
+/* Contenedor y botón de reproducción limpios y perfectos */
 .player-box {
     width: 100%;
     display: flex;
@@ -112,13 +124,30 @@ main#main-content {
     transform: scale(1.08);
 }
 
-/* Asegurar que el botón con el GIF animado se vea grande y brillante */
 .custom-player-img {
     width: 180px;
     height: auto;
     display: block;
     margin: 0 auto;
+    background: transparent !important;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));
+}
+
+@media screen and (max-width: 768px) {
+    .welcome-content {
+        max-width: 90%;
+        padding: 25px 15px;
+    }
+    .welcome-top-title {
+        font-size: 2.6rem !important;
+    }
+    .welcome-main-title {
+        font-size: 3rem !important;
+        letter-spacing: 4px !important;
+    }
+    .custom-player-img {
+        width: 150px !important;
+    }
 }
 
 /* ========================================================
