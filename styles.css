@@ -460,64 +460,95 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD MÓVIL OPTIMIZADA (Responsivo Profesional)
+   ADAPTABILIDAD MÓVIL: Mantiene exactamente la estructura de PC
    ======================================================== */
 @media screen and (max-width: 768px) {
     section {
-        padding: 45px 15px;
+        padding: 40px 12px;
+    }
+
+    /* Forzar que las fotos Polaroid se mantengan lado a lado en móvil igual que en PC */
+    .polaroid-wrapper {
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 15px !important;
     }
 
     .polaroid-card {
-        width: 165px;
-        padding: 8px 8px 22px 8px;
+        width: 155px !important;
+        padding: 8px 8px 22px 8px !important;
     }
 
     .polaroid-card img {
-        height: 185px;
-    }
-
-    .polaroid-wrapper {
-        gap: 15px;
+        height: 175px !important;
     }
 
     .top-subtitle, .section-subtitle-small {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     .bible-verse {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .date-frame h2 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
     }
 
     .time-box span, .separator {
         font-size: 1.6rem;
     }
 
-    /* Ubicación adaptada a móvil manteniendo simetría elegante */
+    /* FORZAR LADO A LADO EN UBICACIÓN PARA CELULAR NORMAL */
     .location-section-horizontal {
-        flex-direction: column;
-        gap: 25px;
-        padding: 30px 15px;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 30px 10px !important;
+        width: 100% !important;
     }
 
     .location-photo-wrapper {
-        width: 100%;
-        justify-content: center;
+        flex: 0 0 45% !important;
+        display: flex !important;
+        justify-content: flex-end !important;
     }
 
     .torn-edge-photo {
-        max-width: 240px;
+        max-width: 140px !important;
+        width: 100% !important;
+        height: auto !important;
     }
 
     .location-content-box {
-        width: 100%;
-        flex: none;
+        flex: 0 0 52% !important;
+        text-align: left !important;
+        align-items: flex-start !important;
+    }
+
+    .custom-icon-container {
+        margin: 0 0 8px 0 !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .section-subtitle {
+        font-size: 1.6rem !important;
+        margin-bottom: 5px !important;
     }
 
     .location-name {
-        font-size: 0.9rem;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 12px !important;
+        padding: 0 !important;
+        text-align: left !important;
+    }
+
+    .btn-location, .btn-confirm {
+        padding: 8px 16px !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 1px !important;
     }
 }
