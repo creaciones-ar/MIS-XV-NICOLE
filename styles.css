@@ -198,11 +198,15 @@ section {
     border-top: 1px solid rgba(174, 185, 200, 0.65);
 }
 
+.hero-music-section {
+    padding-top: 40px !important;
+}
+
 .top-subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 3.2rem;
     font-weight: 400;
-    margin-bottom: 12px;
+    margin-bottom: 10px !important;
     color: #1b365d;
     text-align: center;
 }
@@ -210,7 +214,7 @@ section {
 .name-balloons-container {
     width: 100%;
     max-width: 440px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px auto !important;
     text-align: center;
     padding: 0 15px;
 }
