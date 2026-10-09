@@ -1180,18 +1180,3 @@ section {
     }
 
 } 
-
-/* Estilos para el nuevo icono superior arriba de "It's my birthday" */
-.top-icon-container {
-    width: 60px; /* Puedes ajustar este tamaño a tu gusto */
-    height: auto;
-    margin: 0 auto 10px auto;
-    text-align: center;
-}
-
-.top-icon-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
