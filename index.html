@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis 15 Años - Nicole</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="welcome-active">
 
     <!-- Pantalla de Entrada / Reproductor inicial -->
     <div id="welcome-screen">
         <div class="welcome-content">
-            <h2 class="welcome-main-title">NICOLE</h2>
-            <h1 class="welcome-top-title">It's my birthday</h1>
+            <h2 class="welcome-top-title">It's my birthday</h2>
+            <h1 class="welcome-main-title">NICOLE</h1>
+            
+            <p class="welcome-instruction">Presioná PLAY para reproducir</p>
             
             <div class="player-box">
                 <button id="open-btn" class="custom-play-btn">
                     <img src="icono1.gif" alt="Reproducir música" class="custom-player-img">
                 </button>
             </div>
-            
-            <p class="welcome-instruction">Presioná PLAY para reproducir</p>
         </div>
     </div>
 
@@ -34,13 +34,12 @@
     <!-- Contenido Principal -->
     <main id="main-content" class="hidden">
 
-        <!-- Sección 1: Header con Nombre (Corona/GIF) y Versículo -->
-        <section class="hero-music-section">
-            <h1 class="top-subtitle">It's my birthday</h1>
+        <!-- Sección 1: Hero / Portada Principal -->
+        <section class="hero-section">
+            <h2 class="top-subtitle">It's my birthday</h2>
             <div class="name-balloons-container">
-                <img src="Icono4.gif" alt="NICOLE" class="name-balloons-img">
+                <img src="icono4.gif" alt="NICOLE" class="name-balloons-img">
             </div>
-            
             <div class="bible-section-centered">
                 <p class="bible-verse">
                     "El Señor te bendiga y te guarde; haga resplandecer su rostro sobre ti y te conceda su paz."
@@ -49,7 +48,7 @@
             </div>
         </section>
 
-        <!-- Sección de Fotos Polaroid 1 y 2 -->
+        <!-- Sección de Fotos Polaroid 1 y 2 (Apiladas con inclinación elegante) -->
         <section class="photos-stack-section">
             <div class="polaroid-card tilt-right">
                 <img src="foto1.jpg" alt="Nicole foto 1">
@@ -93,24 +92,26 @@
             </div>
         </section>
 
-<!-- Línea decorativa superior -->
-    <div class="section-divider-line"></div>
+        <!-- Línea divisoria decorativa -->
+        <div class="section-divider-line"></div>
 
-    <!-- Sección 4: Ubicación -->
-    <section class="location-section-horizontal">
-        <div class="location-photo-wrapper">
-            <img src="foto3.jpg" alt="Nicole foto ubicación" class="torn-edge-photo">
-        </div>
+        <!-- Sección 4: Ubicación (Lado a lado en PC, apilado y proporcionado en móvil) -->
+        <section class="location-section-horizontal">
+            <div class="location-photo-wrapper">
+                <img src="foto3.jpg" alt="Nicole foto ubicación" class="torn-edge-photo">
+            </div>
+            
+            <div class="location-content-box">
+                <div class="custom-icon-container">
+                    <img src="icono4.gif" alt="Icono Ubicación" class="section-gif-icon">
+                </div>
+                <h3 class="section-subtitle">Lugar del evento:</h3>
+                <p class="location-name">Vía el Cóndor Salón Costa Eventos</p>
+                <a href="https://www.google.com/maps/place/Catamarca+1540,+C1246+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.6280964,-58.4048353,17z" target="_blank" class="location-btn">Ver Ubicación</a>
+            </div>
+        </section>
 
-        <div class="location-content-box">
-            <img src="icono4.gif" alt="Icono ubicación" class="location-icon-img">
-            <h3 class="section-subtitle">Lugar del evento:</h3>
-            <p class="location-name">VÍA EL CÓNDOR SALÓN COSTA EVENTOS</p>
-            <a href="https://www.google.com/maps/place/Catamarca+1540,+C1246+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.6280964,-58.4048353,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccb1c771a4bbf:0x97a075f8cc40fa1d!3d-34.6280964!4d-58.4048353!16s%2C%2Fg%2F%2F58.4048353" target="_blank" class="location-btn">Ver Ubicación</a>
-        </div>
-    </section>
-
-        <!-- Sección 5: Dress Code (icono3.gif) y Regalos (icono2.gif) -->
+        <!-- Sección 5: Dress Code y Regalos -->
         <section class="info-details-section">
             <div class="info-block">
                 <div class="custom-icon-container">
