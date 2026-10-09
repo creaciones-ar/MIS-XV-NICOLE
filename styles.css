@@ -21,19 +21,19 @@ body.welcome-active {
 }
 
 /* ========================================================
-   CONTENEDOR PRINCIPAL: Solo actúa como tarjeta elegante EN PC
+   CONTENEDOR PRINCIPAL: Tarjeta elegante en PC
    ======================================================== */
 main#main-content {
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.75); /* Un blanco translúcido suave y elegante para PC */
+    background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-    border-radius: 8px; /* Le da un toque de tarjeta fina en PC */
+    border-radius: 8px;
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA (Usando tu fondo3.png real y luminoso)
+   PANTALLA DE BIENVENIDA (Fondo3.png garantizado y luminoso)
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -42,8 +42,7 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    /* Usamos fondo3.png con un filtro ultra sutil para que los colores de tu imagen brillen con elegancia */
-    background-image: linear-gradient(rgba(27, 54, 93, 0.1), rgba(0, 0, 0, 0.25)), url('fondo3.png');
+    background-image: linear-gradient(rgba(27, 54, 93, 0.15), rgba(0, 0, 0, 0.35)), url('fondo3.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,7 +99,6 @@ main#main-content {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Botón de reproducción limpio */
 .player-box {
     width: 100%;
     display: flex;
@@ -122,7 +120,7 @@ main#main-content {
 }
 
 .custom-player-img {
-    width: 250px;
+    width: 210px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -485,18 +483,15 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD MÓVIL (Celulares): Elimina franjas y se ve fluido
+   ADAPTABILIDAD MÓVIL (Celulares): Bloque cerrado correctamente
    ======================================================== */
 @media screen and (max-width: 768px) {
     main#main-content {
         max-width: 100% !important;
-        background-color: transparent !important; /* Elimina la franja blanca a los costados en el celular */
+        background-color: transparent !important;
         box-shadow: none !important;
     }
     
-    /* El resto de tus reglas móviles se mantienen igual... */
-}
-
     section {
         padding: 45px 15px;
     }
@@ -587,6 +582,10 @@ section {
     }
 
     .rsvp-title {
-        font-size: 2.1rem !important; /* Todo en una sola línea en móvil */
+        font-size: 2.1rem !important;
+    }
+
+    .custom-player-img {
+        width: 160px !important;
     }
 }
