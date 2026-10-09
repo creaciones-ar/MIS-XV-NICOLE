@@ -444,12 +444,12 @@ section {
 }
 
 .final-section {
-    padding: 30px 20px 80px 20px;
+    padding: 60px 20px 100px 20px;
     text-align: center;
 }
 
 .bottom-polaroids {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .rsvp-container {
@@ -568,6 +568,21 @@ section {
         padding: 9px 18px !important;
         font-size: 0.7rem !important;
         letter-spacing: 1px !important;
+    }
+
+    /* ========================================================
+       AJUSTES FINALES PARA CELULAR (Espaciado y Título RSVP)
+       ======================================================== */
+    .final-section {
+        padding: 50px 15px 80px 15px !important;
+    }
+
+    .bottom-polaroids {
+        margin-bottom: 35px !important; /* Aleja el cuadro de las fotos Polaroid */
+    }
+
+    .rsvp-title {
+        font-size: 2.1rem !important; /* Evita que la palabra asistencia baje de línea */
     }
 }
 
