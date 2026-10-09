@@ -725,9 +725,9 @@ section {
    CORRECCIÓN DEFINITIVA DE TODOS LOS ICONOS (CENTRADOS)
    ======================================================== */
 .custom-icon-container {
-    width: 60px !important;
-    height: 60px !important;
-    margin: 0 auto 12px auto !important; /* El 'auto' a los lados es clave para que se centren */
+    width: 90px !important;
+    height: 90px !important;
+    margin: 0 auto 15px auto !important; /* El 'auto' a los lados es clave para que se centren */
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
