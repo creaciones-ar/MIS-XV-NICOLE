@@ -27,8 +27,9 @@ main#main-content {
     max-width: 750px;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.75); /* Un blanco translúcido suave y elegante para PC */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    border-radius: 8px; /* Le da un toque de tarjeta fina en PC */
 }
 
 /* ========================================================
