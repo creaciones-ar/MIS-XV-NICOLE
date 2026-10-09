@@ -33,7 +33,7 @@ main#main-content {
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA (Fondo3.png garantizado y luminoso)
+   PANTALLA DE BIENVENIDA
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -140,10 +140,16 @@ section {
     justify-content: center;
 }
 
+/* NUEVO: Espaciado superior para que la corona respire y no se junte con el texto */
+.hero-music-section {
+    padding-top: 50px !important;
+}
+
 .top-subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 3.2rem;
     font-weight: 400;
+    margin-top: 15px; /* Empuja el texto hacia abajo para dejar lugar a la corona */
     margin-bottom: 12px;
     color: #1b365d;
     text-align: center;
@@ -479,113 +485,4 @@ section {
     letter-spacing: 1.5px;
     margin-bottom: 28px;
     color: #4a5568;
-    line-height: 1.5;
-}
-
-/* ========================================================
-   ADAPTABILIDAD MÓVIL (Celulares): Bloque cerrado correctamente
-   ======================================================== */
-@media screen and (max-width: 768px) {
-    main#main-content {
-        max-width: 100% !important;
-        background-color: transparent !important;
-        box-shadow: none !important;
-    }
-    
-    section {
-        padding: 45px 15px;
-    }
-
-    .polaroid-card {
-        width: 155px !important;
-        padding: 8px 8px 22px 8px !important;
-    }
-
-    .polaroid-card img {
-        height: 175px !important;
-    }
-
-    .top-subtitle, .section-subtitle-small {
-        font-size: 2.3rem;
-    }
-
-    .bible-verse {
-        font-size: 1.5rem;
-    }
-
-    .date-frame h2 {
-        font-size: 2.8rem;
-    }
-
-    .time-box span, .separator {
-        font-size: 1.8rem;
-    }
-
-    .location-section-horizontal {
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 15px !important;
-        padding: 35px 10px !important;
-        width: 100% !important;
-    }
-
-    .location-photo-wrapper {
-        flex: 0 0 45% !important;
-        display: flex !important;
-        justify-content: flex-end !important;
-    }
-
-    .torn-edge-photo {
-        max-width: 145px !important;
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .location-content-box {
-        flex: 0 0 52% !important;
-        text-align: left !important;
-        align-items: flex-start !important;
-    }
-
-    .custom-icon-container {
-        margin: 0 0 8px 0 !important;
-        width: 45px !important;
-        height: 45px !important;
-    }
-
-    .section-subtitle {
-        font-size: 1.7rem !important;
-        margin-bottom: 5px !important;
-    }
-
-    .location-name {
-        font-size: 0.75rem !important;
-        letter-spacing: 0.5px !important;
-        margin-bottom: 12px !important;
-        padding: 0 !important;
-        text-align: left !important;
-    }
-
-    .btn-location, .btn-confirm {
-        padding: 9px 18px !important;
-        font-size: 0.7rem !important;
-        letter-spacing: 1px !important;
-    }
-
-    .final-section {
-        padding: 50px 15px 80px 15px !important;
-    }
-
-    .bottom-polaroids {
-        margin-bottom: 35px !important;
-    }
-
-    .rsvp-title {
-        font-size: 2.1rem !important;
-    }
-
-    .custom-player-img {
-        width: 160px !important;
-    }
-}
+    line-height:
