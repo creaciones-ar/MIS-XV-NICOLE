@@ -142,14 +142,14 @@ section {
 
 /* NUEVO: Espaciado superior para que la corona respire y no se junte con el texto */
 .hero-music-section {
-    padding-top: 50px !important;
+    padding-top: 20px !important;
 }
 
 .top-subtitle {
     font-family: 'Great Vibes', cursive;
     font-size: 3.2rem;
     font-weight: 400;
-    margin-top: 15px; /* Empuja el texto hacia abajo para dejar lugar a la corona */
+    margin-top: 20px !important; /* Separa el texto de la corona */
     margin-bottom: 12px;
     color: #1b365d;
     text-align: center;
