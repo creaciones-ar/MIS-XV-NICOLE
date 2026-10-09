@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0.5;
     padding: 0;
     box-sizing: border-box;
 }
@@ -21,7 +21,7 @@ body.welcome-active {
 }
 
 /* ========================================================
-   CONTENEDOR PRINCIPAL TIPO TARJETA PARA PC (Evita que se vea vacío)
+   CONTENEDOR PRINCIPAL TIPO TARJETA PARA PC
    ======================================================== */
 main#main-content {
     max-width: 750px;
@@ -32,7 +32,7 @@ main#main-content {
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA
+   PANTALLA DE BIENVENIDA (Luminosa y festiva)
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -41,7 +41,7 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('fondo3.jpg');
+    background-image: linear-gradient(rgba(27, 54, 93, 0.25), rgba(0, 0, 0, 0.45)), url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -71,26 +71,31 @@ main#main-content {
 
 .welcome-top-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 400;
     margin-bottom: 5px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
 }
 
 .welcome-main-title {
-    font-size: 4.2rem;
+    font-size: 4.5rem;
     letter-spacing: 8px;
     font-weight: 700;
     margin-bottom: 25px;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.3);
 }
 
 .welcome-instruction {
-    font-size: 1rem;
+    font-size: 1.05rem;
     letter-spacing: 3px;
-    color: #e2e8f0;
+    color: #f8fafc;
     text-transform: uppercase;
+    margin-top: 15px;
     margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .player-box {
@@ -120,7 +125,7 @@ main#main-content {
 }
 
 /* ========================================================
-   SECCIONES GENERALES Y TIPOGRAFÍA (Proporcionadas para PC)
+   SECCIONES GENERALES Y TIPOGRAFÍA
    ======================================================== */
 section {
     padding: 70px 30px;
@@ -177,34 +182,37 @@ section {
 }
 
 /* ========================================================
-   FOTOS POLAROID (Grandes y elegantes en PC)
+   FOTOS POLAROID (Global: Siempre lado a lado con inclinación)
    ======================================================== */
-.photos-stack-section {
-    padding: 50px 20px;
+.photos-stack-section, 
+.final-section {
+    padding: 45px 15px;
+    width: 100%;
 }
 
 .polaroid-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
     max-width: 650px;
     width: 100%;
-    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .polaroid-card {
     background: #ffffff;
-    padding: 12px 12px 35px 12px;
+    padding: 10px 10px 30px 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    width: 260px;
+    width: 165px !important;
     border-radius: 6px;
+    flex-shrink: 0;
 }
 
 .polaroid-card img {
-    width: 100%;
-    height: 290px;
+    width: 100% !important;
+    height: 195px !important;
     object-fit: cover;
     display: block;
 }
@@ -307,7 +315,7 @@ section {
 }
 
 /* ========================================================
-   SECCIÓN DE UBICACIÓN (Lado a lado proporcionado en PC)
+   SECCIÓN DE UBICACIÓN (Lado a lado)
    ======================================================== */
 .section-divider-line {
     width: 100px;
@@ -481,65 +489,18 @@ section {
     }
 
     section {
-        padding: 50px 15px;
+        padding: 45px 15px;
     }
 
-  /* ========================================================
-   FOTOS POLAROID: Siempre lado a lado (horizontal) en PC y Móvil
-   ======================================================== */
-.photos-stack-section, 
-.final-section {
-    padding: 40px 10px;
-    width: 100%;
-}
-
-.polaroid-wrapper {
-    display: flex !important;
-    flex-direction: row !important; /* Fuerza estricta posición horizontal */
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 15px !important; /* Espacio armónico y compacto entre las dos fotos */
-    max-width: 650px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.polaroid-card {
-    background: #ffffff;
-    padding: 8px 8px 25px 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    width: 160px !important; /* Ancho optimizado para que entren perfectamente lado a lado en cualquier celular */
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-
-.polaroid-card img {
-    width: 100% !important;
-    height: 180px !important; /* Altura proporcional */
-    object-fit: cover;
-    display: block;
-}
-
-.tilt-left {
-    transform: rotate(-3deg);
-}
-
-.tilt-right {
-    transform: rotate(3deg);
-}
-
-/* Ajustes específicos para pantallas grandes (PC) */
-@media screen and (min-width: 769px) {
+    /* Polaroids compactas y lado a lado en celulares */
     .polaroid-card {
-        width: 240px !important;
+        width: 155px !important;
+        padding: 8px 8px 22px 8px !important;
     }
+
     .polaroid-card img {
-        height: 270px !important;
+        height: 175px !important;
     }
-    .polaroid-wrapper {
-        gap: 30px !important;
-    }
-}
 
     .top-subtitle, .section-subtitle-small {
         font-size: 2.3rem;
@@ -607,5 +568,18 @@ section {
         padding: 9px 18px !important;
         font-size: 0.7rem !important;
         letter-spacing: 1px !important;
+    }
+}
+
+/* Ajustes específicos para pantallas grandes (PC) */
+@media screen and (min-width: 769px) {
+    .polaroid-card {
+        width: 250px !important;
+    }
+    .polaroid-card img {
+        height: 280px !important;
+    }
+    .polaroid-wrapper {
+        gap: 35px !important;
     }
 }
