@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
-    color: #1b365d;
+    color: #333;
     overflow-x: hidden;
 }
 
@@ -20,7 +20,7 @@ body.welcome-active {
     height: 100vh;
 }
 
-/* Pantalla de bienvenida (Reproductor inicial) */
+/* Pantalla de bienvenida */
 #welcome-screen {
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@ body.welcome-active {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url('fondo3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -51,35 +51,33 @@ body.welcome-active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
     text-align: center;
 }
 
+.welcome-main-title {
+    font-size: 3.2rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.9);
+}
+
 .welcome-top-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.welcome-main-title {
-    font-size: 3.5rem;
-    letter-spacing: 5px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
-}
-
-/* Texto de instrucción ARRIBA del icono de música como en la referencia */
 .welcome-instruction {
     font-size: 0.85rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     color: #e2e8f0;
     text-transform: uppercase;
-    margin-bottom: 15px;
-    font-weight: 500;
+    margin-bottom: 12px;
 }
 
 .player-box {
@@ -102,7 +100,7 @@ body.welcome-active {
 }
 
 .custom-player-img {
-    width: 180px;
+    width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -111,7 +109,7 @@ body.welcome-active {
 
 /* Secciones generales */
 section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -119,13 +117,9 @@ section {
     justify-content: center;
 }
 
-.hero-section {
-    padding-top: 80px;
-}
-
 .top-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 10px;
     color: #1b365d;
@@ -134,7 +128,7 @@ section {
 
 .name-balloons-container {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
     margin: 0 auto 20px auto;
     text-align: center;
     padding: 0 15px;
@@ -146,56 +140,49 @@ section {
     display: block;
 }
 
-/* Versículo elegante */
+/* Versículo centrado */
 .bible-section-centered {
-    max-width: 520px;
+    max-width: 500px;
     text-align: center;
     padding: 0 20px;
-    margin: 15px auto;
+    margin: 10px auto;
 }
 
 .bible-verse {
     font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 1.4;
     color: #1b365d;
     margin-bottom: 12px;
 }
 
 .bible-ref {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 2px;
     color: #4a5568;
     display: block;
 }
 
-/* Fotografías estilo Polaroid con inclinaciones refinadas */
+/* Sección de fotos Polaroid */
 .photos-stack-section {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
-    padding: 40px 20px;
-    flex-wrap: wrap;
+    padding: 30px 20px;
 }
 
 .polaroid-card {
     background: #ffffff;
-    padding: 12px 12px 35px 12px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    width: 240px;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 220px;
     border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.polaroid-card:hover {
-    transform: translateY(-5px);
 }
 
 .polaroid-card img {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: cover;
     display: block;
 }
@@ -215,8 +202,8 @@ section {
 }
 
 .month-label {
-    font-size: 1.15rem;
-    letter-spacing: 4px;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 15px;
     color: #1b365d;
@@ -227,12 +214,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
 }
 
 .side-label {
-    font-size: 0.9rem;
-    letter-spacing: 2.5px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: #1b365d;
     font-weight: 600;
@@ -241,31 +228,27 @@ section {
 .date-frame {
     border-top: 2px solid #1b365d;
     border-bottom: 2px solid #1b365d;
-    padding: 12px 30px;
+    padding: 10px 25px;
 }
 
 .date-frame h2 {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 400;
     color: #1b365d;
 }
 
 .year-label {
-    font-size: 1.1rem;
-    letter-spacing: 5px;
+    font-size: 1rem;
+    letter-spacing: 4px;
     margin-top: 15px;
     color: #1b365d;
     font-weight: 600;
 }
 
 /* Cuenta regresiva */
-.countdown-section {
-    padding: 30px 20px;
-}
-
 .section-subtitle-small {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 15px;
     color: #1b365d;
@@ -275,68 +258,66 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin: 10px 0;
 }
 
 .time-box span {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: #1b365d;
 }
 
 .time-box p {
-    font-size: 0.7rem;
-    letter-spacing: 2.5px;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
     margin-top: 5px;
     color: #4a5568;
-    font-weight: 600;
 }
 
 .separator {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
     position: relative;
-    top: -12px;
+    top: -10px;
     color: #1b365d;
 }
 
-/* Línea divisoria superior de ubicación */
+/* Línea divisoria azul superior */
 .section-divider-line {
-    width: 100px;
+    width: 80px;
     height: 2px;
     background-color: #1b365d;
     margin: 30px auto;
 }
 
-/* Sección de Ubicación Lado a Lado (Proporcionada y elegante) */
+/* Ubicación lado a lado */
 .location-section-horizontal {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     padding: 40px 20px;
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
 }
 
 .location-photo-wrapper {
-    flex: 1;
+    flex: 0 0 45%;
     display: flex;
     justify-content: flex-end;
 }
 
 .torn-edge-photo {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
     display: block;
-    filter: drop-shadow(0 8px 20px rgba(0,0,0,0.12));
 }
 
 .location-content-box {
-    flex: 1;
+    flex: 0 0 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -345,27 +326,49 @@ section {
 
 .section-subtitle {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 400;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #1b365d;
 }
 
 .location-name {
-    font-size: 1.1rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 25px;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     color: #1b365d;
     font-weight: 600;
-    line-height: 1.5;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+
+/* Botón enmarcado elegante */
+.location-btn, .btn-confirm {
+    background: transparent;
+    border: 2px solid #1b365d;
+    color: #1b365d;
+    padding: 12px 35px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.location-btn:hover, .btn-confirm:hover {
+    background-color: #1b365d;
+    color: #ffffff;
 }
 
 /* Contenedor de iconos GIF */
 .custom-icon-container {
-    width: 75px;
-    height: 75px;
-    margin: 0 auto 12px auto;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 10px auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -378,155 +381,111 @@ section {
     display: block;
 }
 
-/* Botones enmarcados y estilizados */
-.location-btn, .btn-confirm {
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
-    border: 2px solid #1b365d;
-    color: #1b365d;
-    padding: 14px 38px;
-    font-size: 0.85rem;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    border-radius: 35px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    display: inline-block;
-    box-shadow: 0 4px 12px rgba(27, 54, 93, 0.15);
-}
-
-.location-btn:hover, .btn-confirm:hover {
-    background-color: #1b365d;
-    background: #1b365d;
-    color: #ffffff;
-    box-shadow: 0 6px 18px rgba(27, 54, 93, 0.3);
-    transform: translateY(-2px);
-}
-
-/* Dress Code y Regalos */
 .info-details-section {
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .info-block {
-    margin-bottom: 50px;
-    max-width: 500px;
+    margin-bottom: 45px;
+    max-width: 450px;
     text-align: center;
     padding: 0 15px;
 }
 
 .info-text {
-    font-size: 0.95rem;
-    letter-spacing: 1.5px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     color: #4a5568;
-    font-weight: 500;
 }
 
 .alias-text {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     color: #1b365d;
 }
 
 /* Sección final */
 .final-section {
-    padding: 40px 20px 80px 20px;
+    padding: 30px 20px 70px 20px;
     text-align: center;
 }
 
 .bottom-polaroids {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .rsvp-container {
-    background: rgba(27, 54, 93, 0.04);
-    border: 1.5px solid rgba(27, 54, 93, 0.15);
-    padding: 40px 25px;
+    background: rgba(27, 54, 93, 0.05);
+    border: 1px solid rgba(27, 54, 93, 0.2);
+    padding: 35px 20px;
     width: 90%;
-    max-width: 500px;
-    margin: 20px auto 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    max-width: 450px;
+    margin: 10px auto 0 auto;
+    border-radius: 8px;
 }
 
 .rsvp-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-weight: 400;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: #1b365d;
 }
 
 .rsvp-desc {
-    font-size: 0.9rem;
-    letter-spacing: 1.2px;
-    margin-bottom: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
     color: #4a5568;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* ========================================================
-   ADAPTABILIDAD PROFESIONAL PARA CELULARES (Móviles)
+   ADAPTABILIDAD PARA MÓVILES (Estable y limpia)
    ======================================================== */
 @media screen and (max-width: 768px) {
     section {
-        padding: 45px 15px;
-    }
-
-    .welcome-main-title {
-        font-size: 2.8rem;
-    }
-
-    .welcome-top-title {
-        font-size: 2.6rem;
+        padding: 50px 15px;
     }
 
     .polaroid-card {
-        width: 200px;
-        padding: 10px 10px 30px 10px;
+        width: 190px;
+        padding: 8px 8px 25px 8px;
     }
 
     .polaroid-card img {
-        height: 220px;
-    }
-
-    .photos-stack-section, .bottom-polaroids {
-        gap: 20px;
+        height: 200px;
     }
 
     .top-subtitle {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
 
     .bible-verse {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .date-frame h2 {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .time-box span, .separator {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    /* Ubicación adaptada a móvil con total fluidez */
     .location-section-horizontal {
         flex-direction: column;
         text-align: center;
-        gap: 25px;
-        padding: 30px 15px;
+        gap: 30px;
     }
 
     .location-photo-wrapper {
@@ -541,9 +500,5 @@ section {
     .location-content-box {
         width: 100%;
         text-align: center;
-    }
-
-    .location-name {
-        font-size: 1rem;
     }
 }
