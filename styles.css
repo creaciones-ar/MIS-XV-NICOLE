@@ -42,7 +42,7 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    background-image: linear-gradient(rgba(27, 54, 93, 0.15), rgba(0, 0, 0, 0.35)), url('fondo3.png');
+    background-image: linear-gradient(rgba(27, 54, 93, 0.15), rgba(0, 0, 0, 0.35)), url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
