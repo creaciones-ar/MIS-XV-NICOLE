@@ -1,5 +1,5 @@
 * {
-    margin: 0.5;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -21,7 +21,7 @@ body.welcome-active {
 }
 
 /* ========================================================
-   CONTENEDOR PRINCIPAL TIPO TARJETA PARA PC
+   CONTENEDOR PRINCIPAL: Solo actúa como tarjeta elegante EN PC
    ======================================================== */
 main#main-content {
     max-width: 750px;
@@ -32,7 +32,7 @@ main#main-content {
 }
 
 /* ========================================================
-   PANTALLA DE BIENVENIDA (Fondo elegante y lujoso de alta gama)
+   PANTALLA DE BIENVENIDA (Con tu foto de fondo real y luminosa)
    ======================================================== */
 #welcome-screen {
     position: fixed;
@@ -41,8 +41,8 @@ main#main-content {
     width: 100vw;
     height: 100dvh;
     height: 100vh;
-    /* Fondo de lujo con un degradado sofisticado en tonos azul marino profundo y toques atmosféricos */
-    background: linear-gradient(135deg, #0b1d3a 0%, #1b365d 50%, #070e18 100%);
+    /* Filtro sutil y elegante que deja respirar los colores de fondo3.jpg */
+    background-image: linear-gradient(rgba(27, 54, 93, 0.15), rgba(0, 0, 0, 0.35)), url('fondo3.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -68,12 +68,6 @@ main#main-content {
     max-width: 500px;
     width: 100%;
     text-align: center;
-    padding: 30px 20px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .welcome-top-title {
@@ -86,7 +80,7 @@ main#main-content {
 }
 
 .welcome-main-title {
-    font-size: 3.8rem;
+    font-size: 4rem;
     letter-spacing: 6px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -97,13 +91,14 @@ main#main-content {
 .welcome-instruction {
     font-size: 0.95rem;
     letter-spacing: 2px;
-    color: #e2e8f0;
+    color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 20px;
     font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Contenedor y botón de reproducción limpios y perfectos */
+/* Reproductor de bienvenida sin fondos cuadrados blancos */
 .player-box {
     width: 100%;
     display: flex;
@@ -125,52 +120,18 @@ main#main-content {
 }
 
 .custom-player-img {
-    width: 180px;
+    width: 170px;
     height: auto;
     display: block;
     margin: 0 auto;
     background: transparent !important;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));
-}
-
-@media screen and (max-width: 768px) {
-    .welcome-content {
-        max-width: 90%;
-        padding: 25px 15px;
-    }
-    .welcome-top-title {
-        font-size: 2.6rem !important;
-    }
-    .welcome-main-title {
-        font-size: 3rem !important;
-        letter-spacing: 4px !important;
-    }
-    .custom-player-img {
-        width: 150px !important;
-    }
+    /* Truco CSS: Si el icono tiene fondo blanco, esto lo vuelve transparente automáticamente */
+    mix-blend-mode: multiply; 
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
 }
 
 /* ========================================================
-   ADAPTABILIDAD MÓVIL PARA LA BIENVENIDA
-   ======================================================== */
-@media screen and (max-width: 768px) {
-    .welcome-top-title {
-        font-size: 2.9rem !important;
-    }
-    .welcome-main-title {
-        font-size: 3.2rem !important;
-        letter-spacing: 4px !important;
-    }
-    .welcome-instruction {
-        font-size: 0.8rem !important;
-    }
-    .custom-player-img {
-        width: 160px !important;
-    }
-}
-
-/* ========================================================
-   SECCIONES GENERALES Y TIPOGRAFÍA
+   SECCIONES GENERALES Y TIPOGRAFÍA (PC)
    ======================================================== */
 section {
     padding: 70px 30px;
@@ -227,7 +188,7 @@ section {
 }
 
 /* ========================================================
-   FOTOS POLAROID (Global: Siempre lado a lado con inclinación)
+   FOTOS POLAROID
    ======================================================== */
 .photos-stack-section, 
 .final-section {
@@ -250,14 +211,14 @@ section {
     background: #ffffff;
     padding: 10px 10px 30px 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-    width: 165px !important;
+    width: 240px;
     border-radius: 6px;
     flex-shrink: 0;
 }
 
 .polaroid-card img {
     width: 100% !important;
-    height: 195px !important;
+    height: 270px !important;
     object-fit: cover;
     display: block;
 }
@@ -360,7 +321,7 @@ section {
 }
 
 /* ========================================================
-   SECCIÓN DE UBICACIÓN (Lado a lado)
+   SECCIÓN DE UBICACIÓN
    ======================================================== */
 .section-divider-line {
     width: 100px;
@@ -524,20 +485,19 @@ section {
 }
 
 /* ========================================================
-   ADAPTABILIDAD MÓVIL (Celulares)
+   ADAPTABILIDAD MÓVIL (Celulares): Elimina franjas y se ve fluido
    ======================================================== */
 @media screen and (max-width: 768px) {
     main#main-content {
-        max-width: 100%;
-        background-color: transparent;
-        box-shadow: none;
+        max-width: 100% !important;
+        background-color: transparent !important; /* Elimina la franja blanca a los costados en móvil */
+        box-shadow: none !important;
     }
 
     section {
         padding: 45px 15px;
     }
 
-    /* Polaroids compactas y lado a lado en celulares */
     .polaroid-card {
         width: 155px !important;
         padding: 8px 8px 22px 8px !important;
@@ -615,31 +575,15 @@ section {
         letter-spacing: 1px !important;
     }
 
-    /* ========================================================
-       AJUSTES FINALES PARA CELULAR (Espaciado y Título RSVP)
-       ======================================================== */
     .final-section {
         padding: 50px 15px 80px 15px !important;
     }
 
     .bottom-polaroids {
-        margin-bottom: 35px !important; /* Aleja el cuadro de las fotos Polaroid */
+        margin-bottom: 35px !important;
     }
 
     .rsvp-title {
-        font-size: 2.1rem !important; /* Evita que la palabra asistencia baje de línea */
-    }
-}
-
-/* Ajustes específicos para pantallas grandes (PC) */
-@media screen and (min-width: 769px) {
-    .polaroid-card {
-        width: 250px !important;
-    }
-    .polaroid-card img {
-        height: 280px !important;
-    }
-    .polaroid-wrapper {
-        gap: 35px !important;
+        font-size: 2.1rem !important; /* Todo en una sola línea en móvil */
     }
 }
