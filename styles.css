@@ -721,34 +721,36 @@ section {
 
 
 
+/* ========================================================
+   CORRECCIÓN DEFINITIVA DE TODOS LOS ICONOS (CENTRADOS)
+   ======================================================== */
 .custom-icon-container {
-
-    width: 70px;
-
-    height: 70px;
-
-    margin: 0 auto 12px auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
+    width: 60px !important;
+    height: 60px !important;
+    margin: 0 auto 12px auto !important; /* El 'auto' a los lados es clave para que se centren */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
-
-
 .section-gif-icon {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
 
+/* Asegurar que los bloques de información y regalos centren todo perfectamente */
+.info-block {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto 40px auto !important;
     width: 100%;
-
-    height: auto;
-
-    object-fit: contain;
-
-    display: block;
-
 }
 
 
