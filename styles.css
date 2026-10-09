@@ -484,20 +484,62 @@ section {
         padding: 50px 15px;
     }
 
-    .polaroid-wrapper {
-        flex-direction: row !important;
-        justify-content: center !important;
-        gap: 15px !important;
-    }
+  /* ========================================================
+   FOTOS POLAROID: Siempre lado a lado (horizontal) en PC y Móvil
+   ======================================================== */
+.photos-stack-section, 
+.final-section {
+    padding: 40px 10px;
+    width: 100%;
+}
 
+.polaroid-wrapper {
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza estricta posición horizontal */
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important; /* Espacio armónico y compacto entre las dos fotos */
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.polaroid-card {
+    background: #ffffff;
+    padding: 8px 8px 25px 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 160px !important; /* Ancho optimizado para que entren perfectamente lado a lado en cualquier celular */
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.polaroid-card img {
+    width: 100% !important;
+    height: 180px !important; /* Altura proporcional */
+    object-fit: cover;
+    display: block;
+}
+
+.tilt-left {
+    transform: rotate(-3deg);
+}
+
+.tilt-right {
+    transform: rotate(3deg);
+}
+
+/* Ajustes específicos para pantallas grandes (PC) */
+@media screen and (min-width: 769px) {
     .polaroid-card {
-        width: 165px !important;
-        padding: 8px 8px 25px 8px !important;
+        width: 240px !important;
     }
-
     .polaroid-card img {
-        height: 190px !important;
+        height: 270px !important;
     }
+    .polaroid-wrapper {
+        gap: 30px !important;
+    }
+}
 
     .top-subtitle, .section-subtitle-small {
         font-size: 2.3rem;
