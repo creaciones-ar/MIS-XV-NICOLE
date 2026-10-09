@@ -50,14 +50,8 @@ main#main-content {
     align-items: center;
     z-index: 99999;
     transition: opacity 0.6s ease, visibility 0.6s ease;
-    padding: 15px;
+    padding: 25px;
     color: #ffffff;
-}
-
-#welcome-screen.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
 }
 
 .welcome-content {
@@ -65,22 +59,22 @@ main#main-content {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 450px;
+    max-width: 550px;
     width: 100%;
     text-align: center;
 }
 
 .welcome-top-title {
     font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
+    font-size: 3.8rem;
     font-weight: 400;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
     color: #ffffff;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .welcome-main-title {
-    font-size: 3.8rem;
+    font-size: 4.8rem;
     letter-spacing: 6px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -89,22 +83,42 @@ main#main-content {
 }
 
 .welcome-instruction {
-    font-size: 0.9rem;
+    font-size: 0.98rem;
     letter-spacing: 2px;
     color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-weight: 600;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+/* Contenedor del botón sin fondos blancos cuadrados */
+.player-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: transparent !important;
+}
+
+.custom-play-btn {
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: none !important;
+    transition: transform 0.2s ease;
+}
+
+.custom-play-btn:hover {
+    transform: scale(1.08);
 }
 
 /* Asegurar que el botón con el GIF animado se vea grande y brillante */
 .custom-player-img {
-    width: 160px;
+    width: 180px;
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.7));
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.8));
 }
 
 /* ========================================================
@@ -112,7 +126,7 @@ main#main-content {
    ======================================================== */
 @media screen and (max-width: 768px) {
     .welcome-top-title {
-        font-size: 2.7rem !important;
+        font-size: 2.9rem !important;
     }
     .welcome-main-title {
         font-size: 3.2rem !important;
@@ -122,7 +136,7 @@ main#main-content {
         font-size: 0.8rem !important;
     }
     .custom-player-img {
-        width: 140px !important;
+        width: 160px !important;
     }
 }
 
