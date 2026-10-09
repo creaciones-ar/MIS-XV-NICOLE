@@ -1179,3 +1179,62 @@ section {
     }
 
 } 
+
+/* ========================================================
+   ADAPTABILIDAD PARA PC: Textos e iconos más grandes y elegantes
+   ======================================================== */
+@media screen and (min-width: 769px) {
+    /* Títulos principales grandes con fuente cursiva */
+    .top-subtitle, .section-subtitle-small, .rsvp-title {
+        font-size: 3.8rem !important;
+    }
+
+    /* Nombre principal o subtítulos de sección */
+    .section-subtitle {
+        font-size: 3.5rem !important;
+    }
+
+    /* Versículos bíblicos */
+    .bible-verse {
+        font-size: 2.8rem !important;
+    }
+
+    /* Números de la fecha principal */
+    .date-frame h2 {
+        font-size: 5rem !important;
+    }
+
+    /* Tamaños de la cuenta regresiva */
+    .time-box span {
+        font-size: 3.5rem !important;
+    }
+    .separator {
+        font-size: 3.5rem !important;
+    }
+
+    /* Textos descriptivos, lugares e información */
+    .location-name {
+        font-size: 1.4rem !important;
+    }
+    .info-text, .rsvp-desc {
+        font-size: 1.15rem !important;
+    }
+    .alias-text {
+        font-size: 1.6rem !important;
+    }
+
+    /* Agrandar las fotos Polaroid en PC */
+    .polaroid-card {
+        width: 280px !important;
+        padding: 12px 12px 35px 12px !important;
+    }
+    .polaroid-card img {
+        height: 320px !important;
+    }
+
+    /* Iconos de las secciones un poco más grandes en PC */
+    .custom-icon-container {
+        width: 85px !important;
+        height: 85px !important;
+    }
+}
