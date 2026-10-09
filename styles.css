@@ -49,18 +49,17 @@ body.welcome-active {
 
 main#main-content {
 
-    max-width: 750px;
+    max-width: 1280px;
 
     width: 100%;
 
     margin: 0 auto;
 
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: transparent !important; /*elimina el fondo blanco en pc y movil */
 
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+    box-shadow: none !important; /*elimina la sombra de la tarjeta */
 
-    border-radius: 8px;
-
+    border-radius: 0 !important;
 }
 
 
